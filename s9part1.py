@@ -20,7 +20,7 @@ rasterout = "C:\\Users\\Yaryna\\Desktop\\progadom\\New Personal Geodatabase.mdb\
 #clipout = "C:\\Users\\Yaryna\\Desktop\\progadom\\New Personal Geodatabase.mdb\\clipout2"
 
 # Process: IDW
-arcpy.Idw_3d(Precip2008Readings, "RASTERVALU", IDWout, "1850,46466995651", "2", "VARIABLE 12", "")
+arcpy.gp.Idw_sa(Precip2008Readings, "RASTERVALU", IDWout, "1850,46466995651", "2", "VARIABLE 12", "")
 
 # Process: Reclassify
 arcpy.gp.Reclassify_sa(IDWout, "VALUE", "27715,960938 46615,086060 1;46615,086060 64536,670227 2;64536,670227 82132,407410 3;82132,407410 111132,789063 4", reclassout, "DATA")
